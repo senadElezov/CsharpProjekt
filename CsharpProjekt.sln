@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Blend for Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpProjekt", "CsharpProjekt\CsharpProjekt.csproj", "{738CCB53-5EF4-4BC3-A6C7-700A38DACD62}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6880DEE-4CD2-4AD6-A379-213E9BD052FB}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\DodajBtn.png = ..\..\..\Desktop\DodajBtn.png
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
