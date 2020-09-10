@@ -1,0 +1,77 @@
+﻿<Application x:Class="CsharpProjekt.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CsharpProjekt"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="LjubicastiChecked" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF190E18" Offset="0"/>
+            <GradientStop Color="#FF321530" Offset="1"/>
+            <GradientStop Color="#FF685867" Offset="0.358"/>
+            <GradientStop Color="#FF664E64" Offset="0.689"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="Ljubicasti" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFD27E0" Offset="0"/>
+            <GradientStop Color="#FFAC0695" Offset="1"/>
+            <GradientStop Color="#FF9B0285" Offset="0.444"/>
+            <GradientStop Color="#FF36002F" Offset="0.507"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="NaslovnicaHover" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3D3D3D" Offset="0"/>
+            <GradientStop Color="#FF939393" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="Naslovnica" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF545454" Offset="0"/>
+        </LinearGradientBrush>
+        <ControlTemplate x:Key="TogleStil" TargetType="{x:Type local:MyRadioButton}">
+            <Grid>
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup Name="CommonStates">
+                        <VisualState  Name="Normal">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElement" 
+                            Storyboard.TargetProperty="Opacity"
+                            To="1"
+                            Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElementHover" 
+                            Storyboard.TargetProperty="Opacity"
+To="0"
+                            Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState Name="Checked">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElement" 
+                            Storyboard.TargetProperty="Opacity"
+                                                  To="0"
+                            Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElementHover" 
+                            Storyboard.TargetProperty="Opacity"
+                            To="1"
+                            Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState Name="MouseOver">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElement" 
+                            Storyboard.TargetProperty="Opacity"
+                                                  To="0"
+                            Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="backgroundElementHover" 
+                            Storyboard.TargetProperty="Opacity"
+                            To="1"
+                            Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border x:Name="backgroundElement" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Opacity="1" CornerRadius="{TemplateBinding CornerRadius}" />
+                <Border x:Name="backgroundElementHover"  BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding HoveredBackground}" Opacity="0" CornerRadius="{TemplateBinding CornerRadius}" />
+                <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </ControlTemplate>
+    </Application.Resources>
+    
+</Application>
