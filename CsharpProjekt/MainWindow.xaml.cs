@@ -234,6 +234,8 @@ namespace CsharpProjekt
         private void BrisiSveKruznice(object sender,RoutedEventArgs e)
         {
             int i = 0;
+            povrsinaLabelKruznica.Content = null;
+            OpsegLabelKruznica.Content = null;
             while (i < PlatnoKruznice.Children.Count)
             {
                 if (PlatnoKruznice.Children[i] is MyCircle)
